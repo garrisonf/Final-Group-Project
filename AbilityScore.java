@@ -1,4 +1,4 @@
-public class AbilityScore extends Character {
+public class AbilityScore {
     private int str;
     private int con;
     private int dex;

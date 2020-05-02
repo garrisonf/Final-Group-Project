@@ -1,11 +1,11 @@
-public class TrainedSkills extends Character {
+public class TrainedSkills {
     private int diplomacy;
     private int heal;
     private int history;
     private int insight;
     private int religion;
 
-    public TrainedSkills(String gender, String race, String characterClass, String characterLevel, String characterSlogan, int diplomacy, int heal, int history, int insight, int religion) {
+    public TrainedSkills(int diplomacy, int heal, int history, int insight, int religion) {
         super();
         this.diplomacy = diplomacy;
         this.heal = heal;

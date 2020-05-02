@@ -3,14 +3,45 @@ public class Character {
     private String race;
     private String characterClass;
     private String characterLevel;
-    private String characterSlogan;
+    
+    private Defense defenseStats;
+    private AbilityScore stats;
+    private AbilityMod statMods;
+    private TrainedSkills trainedSkills;
+    private PersonalSkills personalSkills;
 
-    public Character() {
+ 
+
+    public Character(String gender, String race, String characterClass, String characterLevel) {
         this.gender = gender;
         this.race = race;
         this.characterClass = characterClass;
         this.characterLevel = characterLevel;
-        this.characterSlogan = characterSlogan;
+    }
+    
+    
+      public PersonalSkills getPersonalSkills() {
+        return personalSkills;
+    }
+
+    public TrainedSkills getTrainedSkills() {
+        return trainedSkills;
+    }
+
+    public AbilityMod getStatMods() {
+        return statMods;
+    }
+
+    public AbilityScore getStats() {
+        return stats;
+    }
+    
+    public Defense getDefenseStats() {
+        return defenseStats;
+    }
+
+    public void setDefenseStats(Defense defenseStats) {
+        this.defenseStats = defenseStats;
     }
 
     public String getGender() {
@@ -43,13 +74,5 @@ public class Character {
 
     public void setCharacterLevel(String characterLevel) {
         this.characterLevel = characterLevel;
-    }
-
-    public String getCharacterSlogan() {
-        return characterSlogan;
-    }
-
-    public void setCharacterSlogan(String characterSlogan) {
-        this.characterSlogan = characterSlogan;
     }
 }

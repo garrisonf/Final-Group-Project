@@ -1,4 +1,4 @@
-public class AbilityMod extends AbilityScore {
+public class AbilityMod {
     private int strMod;
     private int conMod;
     private int dexMod;
@@ -6,16 +6,30 @@ public class AbilityMod extends AbilityScore {
     private int wisMod;
     private int chaMod;
 
-    public AbilityMod(int str, int con, int dex, int intel, int wis, int cha, int strMod, int conMod, int dexMod, int intelMod, int wisMod, int chaMod) {
-        super(str, con, dex, intel, wis, cha);
-        this.strMod = strMod;
-        this.conMod = conMod;
-        this.dexMod = dexMod;
-        this.intelMod = intelMod;
-        this.wisMod = wisMod;
-        this.chaMod = chaMod;
+    public AbilityMod(int str, int con, int dex, int intel, int wis, int cha) {
+        this.strMod = calculateMod(str);
+        this.conMod = calculateMod(con);
+        this.dexMod = calculateMod(dex);
+        this.intelMod = calculateMod(intel);
+        this.wisMod = calculateMod(wis);
+        this.chaMod = calculateMod(cha);
     }
 
+    /**
+     *
+     * @param stat Player's ability score
+     * @return Player's ability modifier
+     */
+
+    public int calculateMod(int stat) {
+            if(stat >= 1 && stat <=30)
+            return stat/2 - 5;
+        else if(stat < 1) 
+            return -5;
+        else 
+            return 10;
+    }
+    
     public int getStrMod() {
         return strMod;
     }

@@ -1,10 +1,13 @@
-public class PersonalSkills extends Character {
+public class PersonalSkills {
     private int initiative;
     private int speed;
     private String vision;
     private String languages;
     private String senses;
-
+/*
+    TO DO: redo this entire class
+    
+    */
     public PersonalSkills(int initiative, int speed, String vision, String languages, String senses) {
         this.initiative = initiative;
         this.speed = speed;

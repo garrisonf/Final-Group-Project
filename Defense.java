@@ -1,4 +1,4 @@
-public class Defense extends Character {
+public class Defense {
     private int ac;
     private int fort;
     private int ref;
