@@ -1,0 +1,35 @@
+    //I didn't see the need to make Singleton class
+    //Only D10 is 0~9, the rest starts with 1
+    //Percentage method exists : rollPercentage()
+    //I looked at this article : https://www.skullsplitterdice.com/pages/dnd-dice-explained
+    
+    
+    
+    public static int rollD20() {
+        return 1 + new Random().nextInt(20);
+    }
+    
+    public static int rollD12() {
+        return 1 + new Random().nextInt(12);
+    }
+    
+    public static int rollD10() {
+        return new Random().nextInt(10);
+    }
+   
+    public static int rollPercentage() {
+        return 10*rollD10() + rollD10();
+    }
+    
+    public static int rollD8() {
+        return 1 + new Random().nextInt(8);
+    }
+    
+    public static int rollD6() {
+        return 1 + new Random().nextInt(6);
+    }
+    
+    public static int rollD4() {
+        return 1 + new Random().nextInt(4);
+    }
+    
