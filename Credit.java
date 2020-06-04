@@ -1,5 +1,5 @@
 //Name: Jun Hyeok Bae
-package javafx2;
+package DungeonsAndDragons;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -14,7 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class JavaFX2 extends Application {
+public class Credit extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
