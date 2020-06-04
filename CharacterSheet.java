@@ -57,52 +57,41 @@ public class CharacterSheet extends Application {
         intelI = new TextField();
         chaI = new TextField();
         
-        btnStr.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent t) {
-                String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
-                strI.setText(temp);
-            }
-            
+        btnStr.setOnAction((ActionEvent t) -> {
+            String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
+            strI.setText(temp);
         });
-        btnDex.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent t) {
-                String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
-                dexI.setText(temp);
-            }
-            
+        btnDex.setOnAction((ActionEvent t) -> {
+            String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
+            dexI.setText(temp);
         });
-        btnCon.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent t) {
-                String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
-                conI.setText(temp);
-            }
-            
+        btnCon.setOnAction((ActionEvent t) -> {
+            String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
+            conI.setText(temp);
         });
-        btnIntel.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent t) {
-                String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
-                intelI.setText(temp);
-            }
-            
+        btnIntel.setOnAction((ActionEvent t) -> {
+            String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
+            intelI.setText(temp);
         });
-        btnCha.setOnAction(new EventHandler<ActionEvent>(){
-            @Override
-            public void handle(ActionEvent t) {
-                String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
-                chaI.setText(temp);
-            }
-            
+        btnCha.setOnAction((ActionEvent t) -> {
+            String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
+            chaI.setText(temp);
         });
         
         ObservableList<String> clasList
                 = FXCollections.observableArrayList(
-                        "Class 1",
-                        "Class 2",
-                        "Class 3"
+                        "Barbarian",
+                        "Bard",
+                        "Cleric",
+                        "Druid",
+                        "Fighter",
+                        "Monk",
+                        "Paladin",
+                        "Ranger",
+                        "Rogue",
+                        "Sorcerer",
+                        "Warlock",
+                        "Wizard"
                 );
         final ComboBox clasBox = new ComboBox(clasList);
         clasBox.setPromptText("Class");
