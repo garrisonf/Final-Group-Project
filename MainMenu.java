@@ -26,7 +26,7 @@ import javafx.scene.paint.*;
 import javafx.scene.shape.*;
 import javafx.scene.text.*;
 
-public class Test extends Application {
+public class MainMenu extends Application {
 
 	private javafx.geometry.Rectangle2D primaryScreenBounds = Screen.getPrimary().getBounds();
 
