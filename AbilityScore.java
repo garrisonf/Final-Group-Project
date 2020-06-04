@@ -1,65 +1,44 @@
-public class AbilityScore {
-    private int str;
-    private int con;
-    private int dex;
-    private int intel;
-    private int wis;
-    private int cha;
+package DungeonsAndDragons;
 
-    public int getStr() {
-        return str;
+
+import java.io.Serializable;
+
+public class AbilityScore implements Serializable {
+    private int value;
+    private int mod;
+    
+    AbilityScore(int value) {
+        this.value = value;
+        this.mod = calculateMod(value);
     }
-
-    public void setStr(int str) {
-        this.str = str;
+    
+    public int calculateMod(int stat) {
+            if(stat >= 1 && stat <=30)
+            return stat/2 - 5;
+        else if(stat < 1) 
+            return -5;
+        else 
+            return 10;
     }
-
-    public int getCon() {
-        return con;
+    
+    public int getValue() {
+        return value;
     }
-
-    public void setCon(int con) {
-        this.con = con;
+    
+    public void setValue(int value) {
+        if(value < 0) value = 0;
+        this.value = value;
+        this.mod = calculateMod(value);
     }
-
-    public int getDex() {
-        return dex;
+    
+    public int getMod() {
+        return mod;
     }
-
-    public void setDex(int dex) {
-        this.dex = dex;
-    }
-
-    public int getIntel() {
-        return intel;
-    }
-
-    public void setIntel(int intel) {
-        this.intel = intel;
-    }
-
-    public int getWis() {
-        return wis;
-    }
-
-    public void setWis(int wis) {
-        this.wis = wis;
-    }
-
-    public int getCha() {
-        return cha;
-    }
-
-    public void setCha(int cha) {
-        this.cha = cha;
-    }
-
-    public AbilityScore(int str, int con, int dex, int intel, int wis, int cha) {
-        this.str = str;
-        this.con = con;
-        this.dex = dex;
-        this.intel = intel;
-        this.wis = wis;
-        this.cha = cha;
+    
+    @Override
+    public String toString() {
+        String pos = "";
+        if(mod >= 0) pos = "+";
+        return value + "("+ pos + mod + ")";
     }
 }
