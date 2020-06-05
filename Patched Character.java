@@ -23,6 +23,7 @@ public class Character implements Serializable {
     protected ArrayList<String> SavingThrowsProf = new ArrayList<>();
     protected String Equipment;
 	
+	
 	//Not character specific 
     private AbilityScore str;
     private AbilityScore dex;
