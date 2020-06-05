@@ -39,13 +39,13 @@ public class Character implements Serializable {
     protected List<String> Spell2 = new ArrayList<>();
     protected List<String> Spell3 = new ArrayList<>();
 
- 
+ public Character(){};
 
     public Character(String name , String characterClass, String description, String gender, String race) {
         this.name = name;
         this.characterClass = characterClass;
         this.description = description;
-        this.gender = gender;
+        //this.gender = gender;
         this.race = race;
         
     }
@@ -141,10 +141,10 @@ public class Character implements Serializable {
     public String getEquipment(){
         return Equipment;
     }
-    
+    /*
     public void setEquipment(String equip){
         this.Equipment.add(equip);
-    }
+    }*/
 	
 	public void setSkillsProf1(){
 		this.SkillsProf1 = new ArrayList<String>();
