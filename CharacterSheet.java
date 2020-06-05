@@ -28,38 +28,47 @@ public class CharacterSheet extends Application {
     public void start(Stage stage) throws Exception {
         stage.setTitle("Character Sheet");
         Image image = new Image("https://media.wizards.com/2018/dnd/images/XL2018_DnD.png", 100, 100, false, true);
-        Text prof, clas, race, back, str, dex, con, intel, cha;
-        TextField strI, profI,  dexI, conI, intelI, chaI;
-        Button btnStr, btnDex, btnCon, btnIntel, btnCha, btnMenu, btnNextSel;
+        Text prof, clas, race, back, str, dex, con, intel, cha, wis;
+        TextField strI, profI,  dexI, conI, intelI, chaI, wisI, backI;
+        Button btnStr, btnDex, btnCon, btnIntel, btnCha, btnWis, btnMenu, btnNextSel;
 
         prof = new Text("Profile");
         clas = new Text("Class");
         race = new Text("Race");
-        back = new Text("Background");
+        back = new Text("Description");
         str = new Text("Strength");
         dex = new Text("Dexterity");
         con = new Text("Constitution");
         intel = new Text("Intelligence");
         cha = new Text("Charisma");
+        wis = new Text("Wisdom");
 
         btnStr = new Button("ROLL");
         btnDex = new Button("ROLL");
         btnCon = new Button("ROLL");
         btnIntel = new Button("ROLL");
         btnCha = new Button("ROLL");
+        btnWis = new Button("ROLL");
         btnMenu = new Button("MAIN MENU");
         btnNextSel = new Button("NEXT SELECTION");
         
+        backI = new TextField();
+        backI.setPrefSize(400, 100);
         strI = new TextField();
         profI = new TextField("Character Name");
         dexI = new TextField();
         conI = new TextField();
         intelI = new TextField();
         chaI = new TextField();
+        wisI = new TextField();
         
         btnStr.setOnAction((ActionEvent t) -> {
             String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
             strI.setText(temp);
+        });
+        btnWis.setOnAction((ActionEvent t) -> {
+            String temp = "" + (rollD6() + rollD6() + rollD6() + rollD6());
+            wisI.setText(temp);
         });
         btnDex.setOnAction((ActionEvent t) -> {
             String temp = ""+(rollD6()+rollD6()+rollD6()+rollD6());
@@ -110,7 +119,7 @@ public class CharacterSheet extends Application {
                 );
         final ComboBox raceBox = new ComboBox(raceList);
         raceBox.setPromptText("Race");
-
+/*
         ObservableList<String> backList
                 = FXCollections.observableArrayList(
                         "Background 1",
@@ -182,7 +191,7 @@ public class CharacterSheet extends Application {
                 );
         final ComboBox creatureBox = new ComboBox(creatureList);
         creatureBox.setPromptText("Creature");
-
+*/
         GridPane grid = new GridPane();
         grid.setVgap(10);
         grid.setHgap(10);
@@ -192,13 +201,16 @@ public class CharacterSheet extends Application {
         grid.add(prof, 2, 0, 2, 1);
         grid.add(profI, 2, 1, 2, 1);
         grid.add(back, 2, 2, 2, 1);
-        grid.add(backBox, 2, 3, 2, 1);
+        grid.add(backI, 2, 3, 6, 1);
         grid.add(clas, 5, 0, 2, 1);
         grid.add(clasBox, 5, 1, 2, 1);
         grid.add(race, 8, 0, 2, 1);
         grid.add(raceBox, 8, 1, 2, 1);
         grid.add(str, 0, 4, 2, 1);
         grid.add(strI, 0, 5, 2, 1);
+        grid.add(wis, 3, 6);
+        grid.add(wisI, 3, 7, 2, 1);
+        grid.add(btnWis, 5, 7);
         grid.add(btnStr, 2, 5);
         grid.add(dex, 3, 4);
         grid.add(dexI, 3, 5, 2, 1);
@@ -212,8 +224,8 @@ public class CharacterSheet extends Application {
         grid.add(cha, 0, 6,2 ,1);
         grid.add(chaI, 0, 7, 2, 1);
         grid.add(btnCha, 2,7);
-        grid.add(featBox, 0, 9,2,1);
-        grid.add(creatureBox,3, 9,2,1);
+        //grid.add(featBox, 0, 9,2,1);
+       // grid.add(creatureBox,3, 9,2,1);
         grid.add(btnMenu,8,12,2,1);
         grid.add(btnNextSel, 10, 12, 2, 1);
 
