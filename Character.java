@@ -2,28 +2,28 @@ package DungeonsAndDragons;
 
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.ArrayList;
 
 public class Character implements Serializable {
     // Personal Choices
     private String name; 
-    private String characterClass; 
-    private int characterLevel;    
+    private String characterClass;    
     private String description;     
-    private String gender; 
     private String race; 
     
-    //Game Mechanics (locked)
-    // So don't need setters, only getters
-    private int armorClass; //
+    //Game Mechanics (Character Specific)
+    // Only getters
+    protected int armorClass; //
     // Calculated using hit dice. In the function, print out what the characters hit dice is
-    private int hitPointMax; 
-    //private String hitDice; 
-    private ArrayList<String> ArmorProf;
-    private ArrayList<String> WeaponProf;
-    private ArrayList<String> ToolsProf;
-    private ArrayList<String> SavingThrowsProf;
-    private ArrayList<String> Equipment;
+    protected int hitPointMax;  
+    protected ArrayList<String> ArmorProf = new ArrayList<>();
+    protected ArrayList<String> WeaponProf = new ArrayList<>();
+    protected ArrayList<String> ToolsProf = new ArrayList<>();
+    protected ArrayList<String> SavingThrowsProf = new ArrayList<>();
+    protected String Equipment;
+	
+	//Not character specific 
     private AbilityScore str;
     private AbilityScore dex;
     private AbilityScore con;
@@ -31,24 +31,19 @@ public class Character implements Serializable {
     private AbilityScore wis;
     private AbilityScore cha;
     
-    // Game Mechanics (Player choose from...drop down menu?)
-    private String SkillsProf1;
-    private String SkillsProf2;
-    private String SkillsProf3; 
-    private String Spell1;
-    private String Spell2;
-    private String Spell3;
-    
-    
-    //private TrainedSkills trainedSkills;
-    //private PersonalSkills personalSkills;
+    // Game Mechanics (Getters)
+    protected List<String> SkillsProf1 = new ArrayList<>();
+    protected List<String> SkillsProf2 = new ArrayList<>();
+    protected List<String> SkillsProf3 = new ArrayList<>(); 
+    protected List<String> Spell1 = new ArrayList<>();
+    protected List<String> Spell2 = new ArrayList<>();
+    protected List<String> Spell3 = new ArrayList<>();
 
  
 
-    public Character(String name , String characterClass, int characterLevel, String description, String gender, String race) {
+    public Character(String name , String characterClass, String description, String gender, String race) {
         this.name = name;
         this.characterClass = characterClass;
-        this.characterLevel = characterLevel;
         this.description = description;
         this.gender = gender;
         this.race = race;
@@ -85,14 +80,6 @@ public class Character implements Serializable {
 //        return trainedSkills;
 //    }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getRace() {
         return race;
     }
@@ -109,30 +96,14 @@ public class Character implements Serializable {
         this.characterClass = characterClass;
     }
 
-    public int getCharacterLevel() {
-        return characterLevel;
-    }
-
-    public void setCharacterLevel(int characterLevel) {
-        this.characterLevel = characterLevel;
-    }
-    
     /////////////////////////////////////////////////////////////////////////
     
     public int getArmorClass() {
         return armorClass;
     }
 
-    public void setArmorClass(int armorClass) {
-        this.armorClass = armorClass;
-    }
-
     public int getHitPointMax() {
         return hitPointMax;
-    }
-
-    public void setHitPointMax(int hitPointMax) {
-        this.hitPointMax = hitPointMax;
     }
     
     public String getArmorProf(int index){
@@ -167,12 +138,15 @@ public class Character implements Serializable {
         this.SavingThrowsProf.add(savingThrows);
     }  
     
-    public String getEquipment(int index){
-        return Equipment.get(index);
+    public String getEquipment(){
+        return Equipment;
     }
     
     public void setEquipment(String equip){
         this.Equipment.add(equip);
     }
-
+	
+	public void setSkillsProf1(){
+		this.SkillsProf1 = new ArrayList<String>();
+	}
 }
