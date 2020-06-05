@@ -11,7 +11,7 @@ public class Rogue extends Character{
         //I need default constructor to call methods
         public Rogue(){super();}
         
-        public Barbarian(String name,String description,String gender,String race){
+        public Rogue(String name,String description,String gender,String race){
             super(name , "Rogue", description, gender, race);
         }
 	
