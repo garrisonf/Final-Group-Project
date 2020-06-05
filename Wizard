@@ -17,12 +17,12 @@ public class Wizard extends Character{
 	
 	
 	public int getArmorClass(){
-		armorClass = 17; 
+		armorClass = 11; 
 		return armorClass;
 	}
 	
 	public int getHitPointMax(){
-		hitPointMax = rand.nextInt(8) + 12;
+		hitPointMax = rand.nextInt(6) + 6;
 		return hitPointMax;
 	}	
 
@@ -45,33 +45,33 @@ public class Wizard extends Character{
 	}
 	
 	public ArrayList<String> getSavingThrowsProf(){
-		SavingThrowsProf.add("Strength");
-		SavingThrowsProf.add("Constitution");
+		SavingThrowsProf.add("Intelligence");
+		SavingThrowsProf.add("Wisdom");
 		return SavingThrowsProf;
 	}
 	
 	public String getEquipment(){
-		Equipment = "Greataxe, two Handaxes, Exlplorer's pack, four Javelins";;
+		Equipment = "Quarterstaff, Dagger, Spellbook";
 		return Equipment;
 	}
 	
 	public List<String> getSkillsProf1(){
-		SkillsProf1.add("Animal Handling");
-		SkillsProf1.add("Athletics");
-		SkillsProf1.add("Intimidation");
-		SkillsProf1.add("Nature");
-		SkillsProf1.add("Perception");
-		SkillsProf1.add("Survival");
+		SkillsProf1.add("Arcana");
+		SkillsProf1.add("History");
+		SkillsProf1.add("Insight");
+		SkillsProf1.add("Investigation");
+		SkillsProf1.add("Medicine");
+		SkillsProf1.add("Religion");
 		return SkillsProf1;
 	}
 	
 	public List<String> getSkillsProf2(){
-		SkillsProf2.add("Animal Handling");
-		SkillsProf2.add("Athletics");
-		SkillsProf2.add("Intimidation");
-		SkillsProf2.add("Nature");
-		SkillsProf2.add("Perception");
-		SkillsProf2.add("Survival");
+		SkillsProf1.add("Arcana");
+		SkillsProf1.add("History");
+		SkillsProf1.add("Insight");
+		SkillsProf1.add("Investigation");
+		SkillsProf1.add("Medicine");
+		SkillsProf1.add("Religion");
 		return SkillsProf2;
 	}
 	
@@ -81,17 +81,101 @@ public class Wizard extends Character{
 	}
 	
 	public List<String> getSpell1(){
-		Spell1.add("None");
+		Spell1.add("Alarm");
+		Spell1.add("Burning Hands");
+		Spell1.add("Charm Person");
+		Spell1.add("Color Spray");
+		Spell1.add("Comprehend Languages");
+		Spell1.add("Detect Magic");
+		Spell1.add("Disguise Self");
+		Spell1.add("Expeditious Retreat");
+		Spell1.add("False Life");
+		Spell1.add("Feather Fall");
+		Spell1.add("Find Familiar");
+		Spell1.add("Floating Disk");
+		Spell1.add("Fog Cloud");
+		Spell1.add("Grease");
+		Spell1.add("Hideous Laughter");
+		Spell1.add("Identify");
+		Spell1.add("Illusory Script");
+		Spell1.add("Jump");
+		Spell1.add("Longstrider");
+		Spell1.add("Mage Armor");
+		Spell1.add("Mage Armor");
+		Spell1.add("Magic Missile");
+		Spell1.add("Protection from Evil and Good");
+		Spell1.add("Ray of Sickness");
+		Spell1.add("Shield");
+		Spell1.add("Silent Image");
+		Spell1.add("Sleep");
+		Spell1.add("Thunderwave");
+		Spell1.add("Unseen Servant");
 		return Spell1;
 	}
 	
 	public List<String> getSpell2(){
-		Spell2.add("None");
+		Spell1.add("Alarm");
+		Spell1.add("Burning Hands");
+		Spell1.add("Charm Person");
+		Spell1.add("Color Spray");
+		Spell1.add("Comprehend Languages");
+		Spell1.add("Detect Magic");
+		Spell1.add("Disguise Self");
+		Spell1.add("Expeditious Retreat");
+		Spell1.add("False Life");
+		Spell1.add("Feather Fall");
+		Spell1.add("Find Familiar");
+		Spell1.add("Floating Disk");
+		Spell1.add("Fog Cloud");
+		Spell1.add("Grease");
+		Spell1.add("Hideous Laughter");
+		Spell1.add("Identify");
+		Spell1.add("Illusory Script");
+		Spell1.add("Jump");
+		Spell1.add("Longstrider");
+		Spell1.add("Mage Armor");
+		Spell1.add("Mage Armor");
+		Spell1.add("Magic Missile");
+		Spell1.add("Protection from Evil and Good");
+		Spell1.add("Ray of Sickness");
+		Spell1.add("Shield");
+		Spell1.add("Silent Image");
+		Spell1.add("Sleep");
+		Spell1.add("Thunderwave");
+		Spell1.add("Unseen Servant");
 		return Spell2;
 	}
 	
 	public List<String> getSpell3(){
-		Spell3.add("None");
+		Spell1.add("Alarm");
+		Spell1.add("Burning Hands");
+		Spell1.add("Charm Person");
+		Spell1.add("Color Spray");
+		Spell1.add("Comprehend Languages");
+		Spell1.add("Detect Magic");
+		Spell1.add("Disguise Self");
+		Spell1.add("Expeditious Retreat");
+		Spell1.add("False Life");
+		Spell1.add("Feather Fall");
+		Spell1.add("Find Familiar");
+		Spell1.add("Floating Disk");
+		Spell1.add("Fog Cloud");
+		Spell1.add("Grease");
+		Spell1.add("Hideous Laughter");
+		Spell1.add("Identify");
+		Spell1.add("Illusory Script");
+		Spell1.add("Jump");
+		Spell1.add("Longstrider");
+		Spell1.add("Mage Armor");
+		Spell1.add("Mage Armor");
+		Spell1.add("Magic Missile");
+		Spell1.add("Protection from Evil and Good");
+		Spell1.add("Ray of Sickness");
+		Spell1.add("Shield");
+		Spell1.add("Silent Image");
+		Spell1.add("Sleep");
+		Spell1.add("Thunderwave");
+		Spell1.add("Unseen Servant");
 		return Spell3;
 	}
 }
