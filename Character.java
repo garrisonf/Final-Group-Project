@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class Character implements Serializable {
     // Personal Choices
-    private String name; 
-    private String characterClass;    
-    private String description;     
-    private String race; 
+    protected String name; 
+    protected String characterClass;    
+    protected String description;     
+    protected String race; 
     
     //Game Mechanics (Character Specific)
     // Only getters
@@ -208,8 +208,5 @@ public class Character implements Serializable {
     public void setCha(int cha) {
         this.cha.setValue(cha);
     }
-    
-    
-    
     
 }
