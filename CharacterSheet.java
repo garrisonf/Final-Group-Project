@@ -31,8 +31,8 @@ public class CharacterSheet extends Application {
     public void start(Stage stage) throws Exception {
         stage.setTitle("Character Sheet");
         Image image = new Image("https://media.wizards.com/2018/dnd/images/XL2018_DnD.png", 100, 100, false, true);
-        Text prof, clas, race, back, str, dex, con, intel, cha, wis, armor, hit, skill1, skill2, skill3, spell1, spell2, spell3;
-        TextField strI, profI, dexI, conI, intelI, chaI, wisI, backI, armorI, hitI;
+        Text prof, clas, race, back, str, dex, con, intel, cha, wis, armor, hit, skill1, skill2, spell1, spell2, spell3, equip, feat;
+        TextField strI, profI, dexI, conI, intelI, chaI, wisI, backI, armorI, hitI, equipI;
         Button btnStr, btnDex, btnCon, btnIntel, btnCha, btnWis, btnMenu, btnNextSel, btnArmor, btnHit;
 
         armor = new Text("Armor Class");
@@ -49,10 +49,12 @@ public class CharacterSheet extends Application {
         wis = new Text("Wisdom");
         skill1 = new Text("Skill 1");
         skill2 = new Text("Skill 2");
-        skill3 = new Text("Skill 3");
+        //skill3 = new Text("Skill 3");
         spell1 = new Text("Spell 1");
         spell2 = new Text("Spell 2");
         spell3 = new Text("Spell 3");
+        equip = new Text("Equipment");
+        feat = new Text("Feat");
 
         btnStr = new Button("ROLL");
         btnDex = new Button("ROLL");
@@ -61,8 +63,8 @@ public class CharacterSheet extends Application {
         btnCha = new Button("ROLL");
         btnWis = new Button("ROLL");
         btnMenu = new Button("MAIN MENU");
-        btnNextSel = new Button("NEXT SELECTION");
-        btnArmor = new Button("ROLL");
+        btnNextSel = new Button("EXIT");
+        btnArmor = new Button("SET");
         btnHit = new Button("ROLL");
 
         backI = new TextField();
@@ -76,6 +78,8 @@ public class CharacterSheet extends Application {
         wisI = new TextField();
         armorI = new TextField();
         hitI = new TextField();
+        equipI = new TextField();
+        equipI.setPrefSize(400, 100);
 
         btnStr.setOnAction((ActionEvent t) -> {
             String temp = "" + (rollD6() + rollD6() + rollD6() + rollD6());
@@ -100,6 +104,9 @@ public class CharacterSheet extends Application {
         btnCha.setOnAction((ActionEvent t) -> {
             String temp = "" + (rollD6() + rollD6() + rollD6() + rollD6());
             chaI.setText(temp);
+        });
+        btnNextSel.setOnAction((ActionEvent t) -> {
+            System.exit(0);
         });
 
         ObservableList<String> clasList
@@ -144,36 +151,71 @@ public class CharacterSheet extends Application {
                 );
         final ComboBox backBox = new ComboBox(backList);
         backBox.setPromptText("Background");
+         */
         ObservableList<String> featList
                 = FXCollections.observableArrayList(
-                        "Action Surge (1 use)",
-                        "Action Surge (2 uses)",
-                        "Additional Magical Secrets",
-                        "Arcane Recovery",
-                        "Arcane Tradition",
-                        "Archdruid",
-                        "Aura improvements",
-                        "Aura of Courage",
-                        "Aura of Devotion",
-                        "Aura of Protection",
-                        "Barbarian: Ability Score Improvement 1",
-                        "Barbarian: Ability Score Improvement 2",
-                        "Barbarian: Ability Score Improvement 3",
-                        "Barbarian: Ability Score Improvement 4",
-                        "Barbarian: Ability Score Improvement 5",
-                        "Barbarian: Extra Attack",
-                        "Barbarian: Unarmored Defense",
-                        "Bard: Ability Score Improvement 1",
-                        "Bard: Ability Score Improvement 2",
-                        "Bard: Ability Score Improvement 3",
-                        "Bard: Ability Score Improvement 4",
-                        "Bard: Ability Score Improvement 5",
-                        "Bard: Choose: Expertise 1",
-                        "Bard: Choose: Expertise 2",
-            
+                        "Aberrant Dragonmark",
+                        "Actor",
+                        "Alert",
+                        "Athlete",
+                        "Bountiful Luck",
+                        "Charger",
+                        "Crossbow Expert",
+                        "Defensive Duelist",
+                        "Dragon Fear",
+                        "Dragon Hide",
+                        "Drow High Magic",
+                        "Dual Wielder",
+                        "Dungeon Delver",
+                        "Durable",
+                        "Dwarf Fortitude",
+                        "Elemental Adept",
+                        "Elven Accuracy",
+                        "Fade Away",
+                        "Fey Teleportation",
+                        "Flames of Phlegethos",
+                        "Grappler",
+                        "Great Weapon Master",
+                        "Healer",
+                        "Heavily Armored",
+                        "Infernal Constitution",
+                        "Inspiring Leader",
+                        "Keen Mind",
+                        "Lightly Armored",
+                        "Linguist",
+                        "Lucky",
+                        "Mage Slayer",
+                        "Magic Initiate",
+                        "Martial Adept",
+                        "Medium Armor Master",
+                        "Mobile",
+                        "Moderately Armored",
+                        "Mounted Combatant",
+                        "Observant",
+                        "Orcish Fury",
+                        "Poelarm Master",
+                        "Prodigy",
+                        "Resilient",
+                        "Revenant Blade",
+                        "Ritual Caster",
+                        "Savage Attacker",
+                        "Second Chance",
+                        "Sentinel",
+                        "Sharpshooter",
+                        "Shield Master",
+                        "Skilled",
+                        "Skulker",
+                        "Spell Sniper",
+                        "Squat Nimbleness",
+                        "Tavern Brawler",
+                        "Tough",
+                        "War Caster",
+                        "Weapon Master",
+                        "Wood Elf Magic"
                 );
         final ComboBox featBox = new ComboBox(featList);
         featBox.setPromptText("Feat");
+        /*
         ObservableList<String> creatureList
                 = FXCollections.observableArrayList(
                         "ALMIRAJ",
@@ -234,7 +276,7 @@ public class CharacterSheet extends Application {
                         armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
                         break;
                     case "Rogue":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Rogue().getArmorClass()));
                         break;
                     case "Sorcerer":
                         armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
@@ -279,7 +321,7 @@ public class CharacterSheet extends Application {
                         hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
                         break;
                     case "Rogue":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Rogue().getHitPointMax()));
                         break;
                     case "Sorcerer":
                         hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
@@ -332,7 +374,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Rogue().getSkillsProf1());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
@@ -389,7 +431,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Rogue().getSkillsProf2());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
@@ -413,7 +455,7 @@ public class CharacterSheet extends Application {
                 grid.add(skill2Box, 2, 9, 2, 1);
             }
         });
-
+        /*
         skill3Box = new ComboBox(FXCollections.observableArrayList());
         clasBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> ov,
@@ -446,7 +488,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
+                            observableList = FXCollections.observableList(new Rogue().getSkillsProf3());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
@@ -470,7 +512,7 @@ public class CharacterSheet extends Application {
                 grid.add(skill3Box, 4, 9, 2, 1);
             }
         });
-
+         */
         spell1Box = new ComboBox(FXCollections.observableArrayList());
         clasBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> ov,
@@ -503,7 +545,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSpell1());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Rogue().getSpell1());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSpell1());
@@ -560,7 +602,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSpell2());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Rogue().getSpell2());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSpell2());
@@ -617,7 +659,7 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSpell2());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Rogue().getSpell2());
                             break;
                         case "Sorcerer":
                             observableList = FXCollections.observableList(new Barbarian().getSpell2());
@@ -642,6 +684,55 @@ public class CharacterSheet extends Application {
             }
         });
 
+        clasBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            public void changed(ObservableValue<? extends String> ov,
+                    final String oldvalue, final String newvalue) {
+
+                try {
+                    switch ((String) clasBox.getValue()) {
+                        case "Barbarian":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Bard":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Cleric":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Druid":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Fighter":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Monk":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Paladin":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Ranger":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Rogue":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Sorcerer":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Warlock":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                        case "Wizard":
+                            equipI.setText(new Barbarian().getEquipment());
+                            break;
+                    }
+                } catch (NullPointerException e) {
+                    equipI.setText("Choose class");
+                }
+            }
+        });
+
         Scene scene = new Scene(new Group(), 900, 500);
         grid.add(new ImageView(image), 0, 0, 2, 4);
         grid.add(prof, 2, 0, 2, 1);
@@ -661,7 +752,7 @@ public class CharacterSheet extends Application {
         grid.add(dex, 3, 4);
         grid.add(dexI, 3, 5, 2, 1);
         grid.add(btnDex, 5, 5);
-        grid.add(con, 6, 4, 2, 1);
+        grid.add(con, 6, 4);
         grid.add(conI, 6, 5, 2, 1);
         grid.add(btnCon, 8, 5);
         grid.add(intel, 9, 4, 2, 1);
@@ -670,11 +761,11 @@ public class CharacterSheet extends Application {
         grid.add(cha, 0, 6, 2, 1);
         grid.add(chaI, 0, 7, 2, 1);
         grid.add(btnCha, 2, 7);
-        //grid.add(featBox, 0, 9,2,1);
+        grid.add(featBox, 4, 9, 3, 1);
         // grid.add(creatureBox,3, 9,2,1);
         grid.add(btnMenu, 8, 12, 2, 1);
         grid.add(btnNextSel, 10, 12, 2, 1);
-        grid.add(armor, 6, 6, 2, 1);
+        grid.add(armor, 6, 6);
         grid.add(armorI, 6, 7, 2, 1);
         grid.add(btnArmor, 8, 7);
         grid.add(hit, 9, 6);
@@ -682,16 +773,18 @@ public class CharacterSheet extends Application {
         grid.add(btnHit, 11, 7, 2, 1);
         grid.add(skill1, 0, 8);
         grid.add(skill2, 2, 8);
-        grid.add(skill3, 4, 8);
+        //grid.add(skill3, 4, 8);
         grid.add(skill1Box, 0, 9, 2, 1);
         grid.add(skill2Box, 2, 9, 2, 1);
-        grid.add(skill3Box, 4, 9, 2, 1);
+        //grid.add(skill3Box, 4, 9, 2, 1);
         grid.add(spell1, 0, 10);
         grid.add(spell2, 2, 10);
         grid.add(spell3, 4, 10);
         grid.add(spell1Box, 0, 11, 2, 1);
         grid.add(spell2Box, 2, 11, 2, 1);
         grid.add(spell3Box, 4, 11, 2, 1);
+        grid.add(equip, 7, 8);
+        grid.add(equipI, 7, 9, 6, 3);
 
         Group root = (Group) scene.getRoot();
         root.getChildren().add(grid);
