@@ -15,6 +15,9 @@ public class Sorcerer extends Character{
             super(name , "Sorcerer", description, gender, race);
         }
 	
+	public void initialize(){
+	
+	}
 	
 	public int getArmorClass(){
 		armorClass = 10; 
