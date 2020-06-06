@@ -15,6 +15,7 @@ public class Rogue extends Character{
             super(name , "Rogue", description, gender, race);
         }
 	
+	@Override
 	public void initialize(){
 		armorClass = 13; 
 		hitPointMax = rand.nextInt(8) + 8;
