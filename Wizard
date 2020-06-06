@@ -27,9 +27,7 @@ public class Wizard extends Character{
 	}	
 
 	public ArrayList<String> getArmorProf(){
-		ArmorProf.add("Light");
-		ArmorProf.add("Medium");
-		ArmorProf.add("Shields");
+		ArmorProf.add("none");
 		return ArmorProf;
 	}	
 	
