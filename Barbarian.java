@@ -12,6 +12,7 @@ public class Barbarian extends Character{
             this.rand = new Random();
         }	
         
+	@Override
 	public void initialize(){
             armorClass = 17;
             hitPointMax = rand.nextInt(8) + 12;
