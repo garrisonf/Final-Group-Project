@@ -15,6 +15,9 @@ public class Rogue extends Character{
             super(name , "Rogue", description, gender, race);
         }
 	
+	public void initialize(){
+		
+	}
 	
 	public int getArmorClass(){
 		armorClass = 13; 
