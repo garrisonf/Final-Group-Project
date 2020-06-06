@@ -17,19 +17,17 @@ public class Rogue extends Character{
 	
 	
 	public int getArmorClass(){
-		armorClass = 17; 
+		armorClass = 13; 
 		return armorClass;
 	}
 	
 	public int getHitPointMax(){
-		hitPointMax = rand.nextInt(8) + 12;
+		hitPointMax = rand.nextInt(8) + 8;
 		return hitPointMax;
 	}	
 
 	public ArrayList<String> getArmorProf(){
 		ArmorProf.add("Light");
-		ArmorProf.add("Medium");
-		ArmorProf.add("Shields");
 		return ArmorProf;
 	}	
 	
@@ -40,38 +38,48 @@ public class Rogue extends Character{
 	}
 	
 	public ArrayList<String> getToolsProf(){
-		ToolsProf.add("None");
+		ToolsProf.add("Thieve's Tool");
 		return ToolsProf;
 	}
 	
 	public ArrayList<String> getSavingThrowsProf(){
-		SavingThrowsProf.add("Strength");
-		SavingThrowsProf.add("Constitution");
+		SavingThrowsProf.add("Dexterity");
+		SavingThrowsProf.add("Intelligence");
 		return SavingThrowsProf;
 	}
 	
 	public String getEquipment(){
-		Equipment = "Greataxe, two Handaxes, Exlplorer's pack, four Javelins";;
+		Equipment = "Leather armor, two daggers, thieves' tools";;
 		return Equipment;
 	}
 	
 	public List<String> getSkillsProf1(){
-		SkillsProf1.add("Animal Handling");
+		SkillsProf1.add("Acrobatics");
 		SkillsProf1.add("Athletics");
+		SkillsProf1.add("Deception");
+		SkillsProf1.add("Insight");
 		SkillsProf1.add("Intimidation");
-		SkillsProf1.add("Nature");
+		SkillsProf1.add("Investigation");
 		SkillsProf1.add("Perception");
-		SkillsProf1.add("Survival");
+		SkillsProf1.add("Performance");
+		SkillsProf1.add("Persuasion");
+		SkillsProf1.add("Sleight of Hand");
+		SkillsProf1.add("Stealth");
 		return SkillsProf1;
 	}
 	
 	public List<String> getSkillsProf2(){
-		SkillsProf2.add("Animal Handling");
-		SkillsProf2.add("Athletics");
-		SkillsProf2.add("Intimidation");
-		SkillsProf2.add("Nature");
-		SkillsProf2.add("Perception");
-		SkillsProf2.add("Survival");
+		SkillsProf1.add("Acrobatics");
+		SkillsProf1.add("Athletics");
+		SkillsProf1.add("Deception");
+		SkillsProf1.add("Insight");
+		SkillsProf1.add("Intimidation");
+		SkillsProf1.add("Investigation");
+		SkillsProf1.add("Perception");
+		SkillsProf1.add("Performance");
+		SkillsProf1.add("Persuasion");
+		SkillsProf1.add("Sleight of Hand");
+		SkillsProf1.add("Stealth");
 		return SkillsProf2;
 	}
 	
