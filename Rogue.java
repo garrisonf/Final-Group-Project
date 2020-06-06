@@ -33,7 +33,10 @@ public class Rogue extends Character{
 	
     public ArrayList<String> getWeaponProf(){
 		WeaponProf.add("Simple");
-		WeaponProf.add("Martial");
+		WeaponProf.add("hand crossbows");
+	    	WeaponProf.add("longswords");
+	    	WeaponProf.add("rapiers");
+	    	WeaponProf.add("shortswords");
 		return WeaponProf;
 	}
 	
@@ -69,24 +72,20 @@ public class Rogue extends Character{
 	}
 	
 	public List<String> getSkillsProf2(){
-		SkillsProf1.add("Acrobatics");
-		SkillsProf1.add("Athletics");
-		SkillsProf1.add("Deception");
-		SkillsProf1.add("Insight");
-		SkillsProf1.add("Intimidation");
-		SkillsProf1.add("Investigation");
-		SkillsProf1.add("Perception");
-		SkillsProf1.add("Performance");
-		SkillsProf1.add("Persuasion");
-		SkillsProf1.add("Sleight of Hand");
-		SkillsProf1.add("Stealth");
+		SkillsProf2.add("Acrobatics");
+		SkillsProf2.add("Athletics");
+		SkillsProf2.add("Deception");
+		SkillsProf2.add("Insight");
+		SkillsProf2.add("Intimidation");
+		SkillsProf2.add("Investigation");
+		SkillsProf2.add("Perception");
+		SkillsProf2.add("Performance");
+		SkillsProf2.add("Persuasion");
+		SkillsProf2.add("Sleight of Hand");
+		SkillsProf2.add("Stealth");
 		return SkillsProf2;
 	}
 	
-	public List<String> getSkillsProf3(){
-		SkillsProf3.add("None");
-		return SkillsProf3;
-	}
 	
 	public List<String> getSpell1(){
 		Spell1.add("None");
