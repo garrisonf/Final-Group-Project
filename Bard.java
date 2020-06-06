@@ -12,6 +12,7 @@ public class Bard extends Character{
         this.rand = new Random();
     }	
 
+	@Override
     public void initialize(){
         armorClass = 13;
         hitPointMax = rand.nextInt(8) + 8;
