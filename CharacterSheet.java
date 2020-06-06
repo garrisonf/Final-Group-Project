@@ -255,37 +255,37 @@ public class CharacterSheet extends Application {
                         armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
                         break;
                     case "Bard":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Bard().getArmorClass()));
                         break;
                     case "Cleric":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Cleric().getArmorClass()));
                         break;
                     case "Druid":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Druid().getArmorClass()));
                         break;
                     case "Fighter":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Fighter().getArmorClass()));
                         break;
                     case "Monk":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Monk().getArmorClass()));
                         break;
                     case "Paladin":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Paladin().getArmorClass()));
                         break;
                     case "Ranger":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Ranger().getArmorClass()));
                         break;
                     case "Rogue":
                         armorI.setText(String.valueOf(new Rogue().getArmorClass()));
                         break;
                     case "Sorcerer":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Sorcerer().getArmorClass()));
                         break;
                     case "Warlock":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Warlock().getArmorClass()));
                         break;
                     case "Wizard":
-                        armorI.setText(String.valueOf(new Barbarian().getArmorClass()));
+                        armorI.setText(String.valueOf(new Wizard().getArmorClass()));
                         break;
                 }
             } catch (NullPointerException e) {
@@ -300,37 +300,37 @@ public class CharacterSheet extends Application {
                         hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
                         break;
                     case "Bard":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Bard().getHitPointMax()));
                         break;
                     case "Cleric":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Cleric().getHitPointMax()));
                         break;
                     case "Druid":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Druid().getHitPointMax()));
                         break;
                     case "Fighter":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Fighter().getHitPointMax()));
                         break;
                     case "Monk":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Monk().getHitPointMax()));
                         break;
                     case "Paladin":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Paladin().getHitPointMax()));
                         break;
                     case "Ranger":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Ranger().getHitPointMax()));
                         break;
                     case "Rogue":
                         hitI.setText(String.valueOf(new Rogue().getHitPointMax()));
                         break;
                     case "Sorcerer":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Sorcerer().getHitPointMax()));
                         break;
                     case "Warlock":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Warlock().getHitPointMax()));
                         break;
                     case "Wizard":
-                        hitI.setText(String.valueOf(new Barbarian().getHitPointMax()));
+                        hitI.setText(String.valueOf(new Wizard().getHitPointMax()));
                         break;
                 }
             } catch (NullPointerException e) {
@@ -353,37 +353,37 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Bard().getSkillsProf1());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Cleric().getSkillsProf1());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Druid().getSkillsProf1());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Fighter().getSkillsProf1());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Monk().getSkillsProf1());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Paladin().getSkillsProf1());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Ranger().getSkillsProf1());
                             break;
                         case "Rogue":
                             observableList = FXCollections.observableList(new Rogue().getSkillsProf1());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Sorcerer().getSkillsProf1());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Warlock().getSkillsProf1());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
+                            observableList = FXCollections.observableList(new Wizard().getSkillsProf1());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -410,37 +410,37 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Bard().getSkillsProf2());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Cleric().getSkillsProf2());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Druid().getSkillsProf2());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Fighter().getSkillsProf2());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Monk().getSkillsProf2());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Paladin().getSkillsProf2());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Ranger().getSkillsProf2());
                             break;
                         case "Rogue":
                             observableList = FXCollections.observableList(new Rogue().getSkillsProf2());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Sorcerer().getSkillsProf2());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Warlock().getSkillsProf2());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Wizard().getSkillsProf2());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -524,37 +524,37 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSpell1());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Bard().getSpell1());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Cleric().getSpell1());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Druid().getSpell1());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Fighter().getSpell1());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Monk().getSpell1());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Paladin().getSpell1());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Ranger().getSpell1());
                             break;
                         case "Rogue":
                             observableList = FXCollections.observableList(new Rogue().getSpell1());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Sorcerer().getSpell1());
                             break;
                         case "Warlock":
                             observableList = FXCollections.observableList(new Barbarian().getSpell1());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
+                            observableList = FXCollections.observableList(new Wizard().getSpell1());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -581,37 +581,37 @@ public class CharacterSheet extends Application {
                             observableList = FXCollections.observableList(new Barbarian().getSpell2());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Bard().getSpell2());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Cleric().getSpell2());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Druid().getSpell2());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Fighter().getSpell2());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Monk().getSpell2());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Paladin().getSpell2());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Ranger().getSpell2());
                             break;
                         case "Rogue":
                             observableList = FXCollections.observableList(new Rogue().getSpell2());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Sorcerer().getSpell2());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Warlock().getSpell2());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Wizard().getSpell2());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -635,40 +635,40 @@ public class CharacterSheet extends Application {
                 try {
                     switch ((String) clasBox.getValue()) {
                         case "Barbarian":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Barbarian().getSpell3());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Bard().getSpell3());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Cleric().getSpell3());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Druid().getSpell3());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Fighter().getSpell3());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Monk().getSpell3());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Paladin().getSpell3());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Ranger().getSpell3());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Rogue().getSpell2());
+                            observableList = FXCollections.observableList(new Rogue().getSpell3());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Sorcerer().getSpell3());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Warlock().getSpell3());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Wizard().getSpell3());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -694,37 +694,37 @@ public class CharacterSheet extends Application {
                             equipI.setText(new Barbarian().getEquipment());
                             break;
                         case "Bard":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Bard().getEquipment());
                             break;
                         case "Cleric":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Cleric().getEquipment());
                             break;
                         case "Druid":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Druid().getEquipment());
                             break;
                         case "Fighter":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Fighter().getEquipment());
                             break;
                         case "Monk":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Monk().getEquipment());
                             break;
                         case "Paladin":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Paladin().getEquipment());
                             break;
                         case "Ranger":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Ranger().getEquipment());
                             break;
                         case "Rogue":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Rogue().getEquipment());
                             break;
                         case "Sorcerer":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Sorcerer().getEquipment());
                             break;
                         case "Warlock":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Warlock().getEquipment());
                             break;
                         case "Wizard":
-                            equipI.setText(new Barbarian().getEquipment());
+                            equipI.setText(new Wizard().getEquipment());
                             break;
                     }
                 } catch (NullPointerException e) {
