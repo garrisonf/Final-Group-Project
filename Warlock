@@ -11,10 +11,13 @@ public class Warlock extends Character{
         //I need default constructor to call methods
         public Warlock(){super();}
         
-        public Barbarian(String name,String description,String gender,String race){
+        public Warlock(String name,String description,String gender,String race){
             super(name , "Warlock", description, gender, race);
         }
 	
+	public void initialize(){
+	
+	}
 	
 	public int getArmorClass(){
 		armorClass = 17; 
