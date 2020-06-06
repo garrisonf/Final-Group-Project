@@ -11,7 +11,7 @@ public class Wizard extends Character{
         //I need default constructor to call methods
         public Wizard(){super();}
         
-        public Barbarian(String name,String description,String gender,String race){
+        public Wizard(String name,String description,String gender,String race){
             super(name , "Wizard", description, gender, race);
         }
 	
@@ -101,7 +101,6 @@ public class Wizard extends Character{
 		Spell1.add("Jump");
 		Spell1.add("Longstrider");
 		Spell1.add("Mage Armor");
-		Spell1.add("Mage Armor");
 		Spell1.add("Magic Missile");
 		Spell1.add("Protection from Evil and Good");
 		Spell1.add("Ray of Sickness");
@@ -133,7 +132,6 @@ public class Wizard extends Character{
 		Spell1.add("Illusory Script");
 		Spell1.add("Jump");
 		Spell1.add("Longstrider");
-		Spell1.add("Mage Armor");
 		Spell1.add("Mage Armor");
 		Spell1.add("Magic Missile");
 		Spell1.add("Protection from Evil and Good");
