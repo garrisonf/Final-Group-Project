@@ -11,6 +11,7 @@ public class Druid extends Character{
         super(name, "Druid", description, race);
     }	
 
+	@Override
     public void initialize(){
         armorClass = 13;
         hitPointMax = rand.nextInt(8) + 8;
