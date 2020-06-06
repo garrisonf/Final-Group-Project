@@ -60,7 +60,7 @@ public class Character implements Serializable {
         this.cha = new AbilityScore(cha);
     }
     
-    protected void initalize() {
+    public void initialize() {
         System.err.println("Must Be Overridden In Subclass");
     }
     
