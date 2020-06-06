@@ -7,8 +7,17 @@ public class Barbarian extends Character{
 	
 	super(name , Barbarian, description, gender, race);
 	
+	public void initialize(){
+		armorClass = 17;
+		ArmorProf.add("Light");
+		ArmorProf.add("Medium");
+		ArmorProf.add("Shields");
+		WeaponProf.add("Simple");
+		WeaponProf.add("Martial");
+	}
+	
 	public int getArmorClass(){
-		armorClass = 17; 
+		 
 		return armorClass;
 	}
 	
@@ -18,15 +27,10 @@ public class Barbarian extends Character{
 	}	
 
 	public ArrayList<String> getArmorProf(){
-		ArmorProf.add("Light");
-		ArmorProf.add("Medium");
-		ArmorProf.add("Shields");
 		return ArmorProf;
 	}	
 	
     public ArrayList<String> getWeaponProf(){
-		WeaponProf.add("Simple");
-		WeaponProf.add("Martial");
 		return WeaponProf;
 	}
 	
