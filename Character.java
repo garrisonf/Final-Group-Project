@@ -41,7 +41,7 @@ public class Character implements Serializable {
 
  public Character(){};
 
-    public Character(String name , String characterClass, String description, String gender, String race) {
+    public Character(String name , String characterClass, String description, String race) {
         this.name = name;
         this.characterClass = characterClass;
         this.description = description;
@@ -75,7 +75,14 @@ public class Character implements Serializable {
                 + "\ncha:" + cha;
     }
     
+    public String getCharacterClass() {
+        return characterClass;
+    }
 
+    public void setCharacterClass(String characterClass) {
+        this.characterClass = characterClass;
+    }
+    
     public String getRace() {
         return race;
     }
@@ -84,12 +91,21 @@ public class Character implements Serializable {
         this.race = race;
     }
 
-    public String getCharacterClass() {
-        return characterClass;
+        
+    public String getName() {
+	return name;
     }
 
-    public void setCharacterClass(String characterClass) {
-        this.characterClass = characterClass;
+    public void setName(String name) {
+            this.name = name;
+    } 
+
+    public String getDescription() {
+            return description;
+    }
+
+    public void setDescription(String description) {
+            this.description = description;
     }
 
     /////////////////////////////////////////////////////////////////////////
@@ -208,35 +224,5 @@ public class Character implements Serializable {
     public void setCha(int cha) {
         this.cha.setValue(cha);
     }
-    
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	} 
-	
-	public String getClass() {
-		return characterClass;
-	}
-	public String setClass(String characterClass) {
-		this.characterClass = characterClass;
-	}
-	
-	public String getDescription() {
-		return description;
-	}
-	
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	public String getRace() {
-		return race;
-	}
-	
-	public void setRace(String race) {
-		this.race = race;
-	}
 }

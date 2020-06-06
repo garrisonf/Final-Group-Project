@@ -1,92 +1,36 @@
-package DungeonsAndDragons
-
+package DungeonsAndDragons;
 import java.util.Random;
 
 public class Barbarian extends Character{
-	private Random rand = new Random();
+	private Random rand;
 	
-	super(name , Barbarian, description, gender, race);
-	
+        //Default Constructor
+        public Barbarian(){super();}
+        
+        public Barbarian(String name , String characterClass, String description, String race){
+            super(name, "Barbarian", description, race);
+            this.rand = new Random();
+        }	
+        
 	public void initialize(){
-		armorClass = 17;
-		ArmorProf.add("Light");
-		ArmorProf.add("Medium");
-		ArmorProf.add("Shields");
-		WeaponProf.add("Simple");
-		WeaponProf.add("Martial");
+            armorClass = 17;
+            hitPointMax = rand.nextInt(8) + 12;
+            ArmorProf.add("Light");
+            ArmorProf.add("Medium");
+            ArmorProf.add("Shields");
+            WeaponProf.add("Simple");
+            WeaponProf.add("Martial");
+            ToolsProf.add("None");
+            SavingThrowsProf.add("Strength");
+            SavingThrowsProf.add("Constitution");
+            Equipment = "Greataxe, two Handaxes, Exlplorer's pack, four Javelins";
+            SkillsProf.add("Animal Handling");
+            SkillsProf.add("Athletics");
+            SkillsProf.add("Intimidation");
+            SkillsProf.add("Nature");
+            SkillsProf.add("Perception");
+            SkillsProf.add("Survival");
+            Spells.add("None");
 	}
-	
-	public int getArmorClass(){
-		 
-		return armorClass;
-	}
-	
-	public int getHitPointMax(){
-		hitPointMax = rand.nextInt(8) + 12;
-		return hitPointMax;
-	}	
-
-	public ArrayList<String> getArmorProf(){
-		return ArmorProf;
-	}	
-	
-    public ArrayList<String> getWeaponProf(){
-		return WeaponProf;
-	}
-	
-	public ArrayList<String> getToolsProf(){
-		ToolsProf.add("None");
-		return ToolsProf;
-	}
-	
-	public ArrayList<String> getSavingThrowsProf(){
-		SavingThrowsProf.add("Strength");
-		SavingThrowsProf.add("Constitution");
-		return SavingThrowsProf;
-	}
-	
-	public String getEquipment(){
-		Equipment = "Greataxe, two Handaxes, Exlplorer's pack, four Javelins";;
-		return Equipment;
-	}
-	
-	public List<String> getSkillsProf1(){
-		SkillsProf1.add("Animal Handling");
-		SkillsProf1.add("Athletics");
-		SkillsProf1.add("Intimidation");
-		SkillsProf1.add("Nature");
-		SkillsProf1.add("Perception");
-		SkillsProf1.add("Survival");
-		return SkillsProf1;
-	}
-	
-	public List<String> getSkillsProf2(){
-		SkillsProf2.add("Animal Handling");
-		SkillsProf2.add("Athletics");
-		SkillsProf2.add("Intimidation");
-		SkillsProf2.add("Nature");
-		SkillsProf2.add("Perception");
-		SkillsProf2.add("Survival");
-		return SkillsProf2;
-	}
-	
-	public List<String> getSkillsProf3(){
-		SkillsProf3.add("None");
-		return SkillsProf3;
-	}
-	
-	public List<String> getSpell1(){
-		Spell1.add("None");
-		return Spell1;
-	}
-	
-	public List<String> getSpell2(){
-		Spell2.add("None");
-		return Spell2;
-	}
-	
-	public List<String> getSpell3(){
-		Spell3.add("None");
-		return Spell3;
-	}
+}
 	

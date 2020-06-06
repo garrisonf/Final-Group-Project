@@ -9,6 +9,6 @@ package DungeonsAndDragons;
  *
  * @author bvill
  */
-public class AbilityScore {
+public class Cleric {
     
 }
