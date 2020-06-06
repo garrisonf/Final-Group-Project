@@ -15,6 +15,7 @@ public class Sorcerer extends Character{
             super(name , "Sorcerer", description, gender, race);
         }
 	
+	@Override
 	public void initialize(){
 		armorClass = 10; 
 		hitPointMax = rand.nextInt(6) + 6;
