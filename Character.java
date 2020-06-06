@@ -209,4 +209,34 @@ public class Character implements Serializable {
         this.cha.setValue(cha);
     }
     
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	} 
+	
+	public String getClass() {
+		return characterClass;
+	}
+	public String setClass(String characterClass) {
+		this.characterClass = characterClass;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public String getRace() {
+		return race;
+	}
+	
+	public void setRace(String race) {
+		this.race = race;
+	}
 }
