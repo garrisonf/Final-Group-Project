@@ -16,7 +16,43 @@ public class Rogue extends Character{
         }
 	
 	public void initialize(){
-		
+		armorClass = 13; 
+		hitPointMax = rand.nextInt(8) + 8;
+		ArmorProf.add("Light");
+		WeaponProf.add("Simple");
+		WeaponProf.add("hand crossbows");
+	    	WeaponProf.add("longswords");
+	    	WeaponProf.add("rapiers");
+	    	WeaponProf.add("shortswords");
+		ToolsProf.add("Thieve's Tool");
+		SavingThrowsProf.add("Dexterity");
+		SavingThrowsProf.add("Intelligence");
+		Equipment = "Leather armor, two daggers, thieves' tools";
+		SkillsProf1.add("Acrobatics");
+		SkillsProf1.add("Athletics");
+		SkillsProf1.add("Deception");
+		SkillsProf1.add("Insight");
+		SkillsProf1.add("Intimidation");
+		SkillsProf1.add("Investigation");
+		SkillsProf1.add("Perception");
+		SkillsProf1.add("Performance");
+		SkillsProf1.add("Persuasion");
+		SkillsProf1.add("Sleight of Hand");
+		SkillsProf1.add("Stealth");
+		SkillsProf2.add("Acrobatics");
+		SkillsProf2.add("Athletics");
+		SkillsProf2.add("Deception");
+		SkillsProf2.add("Insight");
+		SkillsProf2.add("Intimidation");
+		SkillsProf2.add("Investigation");
+		SkillsProf2.add("Perception");
+		SkillsProf2.add("Performance");
+		SkillsProf2.add("Persuasion");
+		SkillsProf2.add("Sleight of Hand");
+		SkillsProf2.add("Stealth");
+		Spell1.add("None");
+		Spell2.add("None");
+		Spell3.add("None");
 	}
 	
 	public int getArmorClass(){
@@ -55,7 +91,7 @@ public class Rogue extends Character{
 	}
 	
 	public String getEquipment(){
-		Equipment = "Leather armor, two daggers, thieves' tools";;
+		Equipment = "Leather armor, two daggers, thieves' tools";
 		return Equipment;
 	}
 	
