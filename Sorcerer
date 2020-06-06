@@ -11,25 +11,23 @@ public class Sorcerer extends Character{
         //I need default constructor to call methods
         public Sorcerer(){super();}
         
-        public Barbarian(String name,String description,String gender,String race){
+        public Sorcerer(String name,String description,String gender,String race){
             super(name , "Sorcerer", description, gender, race);
         }
 	
 	
 	public int getArmorClass(){
-		armorClass = 17; 
+		armorClass = 10; 
 		return armorClass;
 	}
 	
 	public int getHitPointMax(){
-		hitPointMax = rand.nextInt(8) + 12;
+		hitPointMax = rand.nextInt(6) + 4;
 		return hitPointMax;
 	}	
 
 	public ArrayList<String> getArmorProf(){
-		ArmorProf.add("Light");
-		ArmorProf.add("Medium");
-		ArmorProf.add("Shields");
+		ArmorProf.add("none");
 		return ArmorProf;
 	}	
 	
@@ -45,13 +43,13 @@ public class Sorcerer extends Character{
 	}
 	
 	public ArrayList<String> getSavingThrowsProf(){
-		SavingThrowsProf.add("Strength");
+		SavingThrowsProf.add("Charisma");
 		SavingThrowsProf.add("Constitution");
 		return SavingThrowsProf;
 	}
 	
 	public String getEquipment(){
-		Equipment = "Greataxe, two Handaxes, Exlplorer's pack, four Javelins";;
+		Equipment = "dungeoneer's pack, explorer's pack, Two daggers";
 		return Equipment;
 	}
 	
