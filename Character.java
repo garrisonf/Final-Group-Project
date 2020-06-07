@@ -1,6 +1,5 @@
 package DungeonsAndDragons;
 
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ public class Character implements Serializable {
     protected String description;     
     protected String race; 
     
-    //Game Mechanics (Character Specific)
+    // Game Mechanics (Character Specific)
     // Only getters
     protected int armorClass; //
     // Calculated using hit dice. In the function, print out what the characters hit dice is
@@ -32,15 +31,10 @@ public class Character implements Serializable {
     protected AbilityScore cha;
     
     // Game Mechanics (Getters)
-    protected List<String> SkillsProf1 = new ArrayList<>();
-    protected List<String> SkillsProf2 = new ArrayList<>();
-    protected List<String> SkillsProf3 = new ArrayList<>(); 
-    protected List<String> Spell1 = new ArrayList<>();
-    protected List<String> Spell2 = new ArrayList<>();
-    protected List<String> Spell3 = new ArrayList<>();
-
- public Character(){};
-
+    protected List<String> SkillsProf = new ArrayList<>();
+    protected List<String> Spells = new ArrayList<>();
+    
+    public Character(){};
     public Character(String name , String characterClass, String description, String race) {
         this.name = name;
         this.characterClass = characterClass;
@@ -60,7 +54,7 @@ public class Character implements Serializable {
         this.cha = new AbilityScore(cha);
     }
     
-    public void initialize() {
+    protected void initalize() {
         System.err.println("Must Be Overridden In Subclass");
     }
     
@@ -172,10 +166,7 @@ public class Character implements Serializable {
     
     public String getEquipment(){
         return Equipment;
-    }
-   
-
-    
+    } 
 
     public AbilityScore getStr() {
         return str;
@@ -225,4 +216,23 @@ public class Character implements Serializable {
         this.cha.setValue(cha);
     }
 
+    public List<String> getSkillsProf1(){
+        return SkillsProf;
+    }
+    
+    public List<String> getSkillsProf2(){
+        return SkillsProf;
+    }
+    
+    public List<String> getSpell1(){
+	return Spells;
+    }
+    
+    public List<String> getSpell2(){
+	return Spells;
+    }
+    
+    public List<String> getSpell3(){
+	return Spells;
+    }
 }
