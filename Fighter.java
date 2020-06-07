@@ -4,7 +4,7 @@ import java.util.Random;
 
 class Fighter extends Character {
     private Random rand;
-    public Fighter() {super();this.initialize();}
+    public Fighter() {super();this.rand = new Random();this.initialize();}
 
     public Fighter(String name, String characterClass, String description, String race) {
         super(name, "Fighter", description, race);this.initialize();
