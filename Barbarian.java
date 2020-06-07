@@ -5,16 +5,14 @@ public class Barbarian extends Character{
 	private Random rand;
 	
         //Default Constructor
-        public Barbarian(){super();}
+        public Barbarian(){super(); this.rand = new Random();}
         
         public Barbarian(String name , String characterClass, String description, String race){
             super(name, "Barbarian", description, race);
-            this.rand = new Random();
         }	
         
-	@Override
 	public void initialize(){
-            armorClass = 17;
+            armorClass = 18;
             hitPointMax = rand.nextInt(8) + 12;
             ArmorProf.add("Light");
             ArmorProf.add("Medium");

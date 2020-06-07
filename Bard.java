@@ -5,14 +5,12 @@ public class Bard extends Character{
     private Random rand;
 
     //Default Constructor
-    public Bard(){super();}
+    public Bard(){super(); this.rand = new Random();}
 
     public Bard(String name , String characterClass, String description, String race){
         super(name, "Bard", description, race);
-        this.rand = new Random();
     }	
 
-	@Override
     public void initialize(){
         armorClass = 13;
         hitPointMax = rand.nextInt(8) + 8;
