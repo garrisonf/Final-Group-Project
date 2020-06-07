@@ -142,16 +142,6 @@ public class CharacterSheet extends Application {
         final ComboBox raceBox = new ComboBox(raceList);
         raceBox.setPromptText("Race");
 
-        /*
-        ObservableList<String> backList
-                = FXCollections.observableArrayList(
-                        "Background 1",
-                        "Background 2",
-                        "Background 3"
-                );
-        final ComboBox backBox = new ComboBox(backList);
-        backBox.setPromptText("Background");
-         */
         ObservableList<String> featList
                 = FXCollections.observableArrayList(
                         "Aberrant Dragonmark",
@@ -215,39 +205,6 @@ public class CharacterSheet extends Application {
                 );
         final ComboBox featBox = new ComboBox(featList);
         featBox.setPromptText("Feat");
-        /*
-        ObservableList<String> creatureList
-                = FXCollections.observableArrayList(
-                        "ALMIRAJ",
-                        "CAT",
-                        "BAT",
-                        "FLYING MONKEY",
-                        "FROG",
-                        "HAWK",
-                        "CRAB",
-                        "LIZARD",
-                        "OCTOPUS",
-                        "OWL",
-                        "POISONOUS SNAKE",
-                        "Adult White Dragon",
-                        "FISH (QUIPPER)",
-                        "RAVEN",
-                        "RAT",
-                        "SEAHORSE",
-                        "SPIDER",
-                        "TRESSYM",
-                        "WEASEL",
-                        "IMP",
-                        "PSEUDODRAGON",
-                        "QUASIT",
-                        "SPRITE",
-                        "CRANIUM RAT",
-                        "GAZER",
-                        "CRAWLING CLAW",
-                );
-        final ComboBox creatureBox = new ComboBox(creatureList);
-        creatureBox.setPromptText("Creature");
-         */
         btnArmor.setOnAction((ActionEvent t) -> {
             try {
                 switch ((String) clasBox.getValue()) {
@@ -407,40 +364,40 @@ public class CharacterSheet extends Application {
                 try {
                     switch ((String) clasBox.getValue()) {
                         case "Barbarian":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf1());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Bard().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Bard().getSkillsProf1());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Cleric().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Cleric().getSkillsProf1());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Druid().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Druid().getSkillsProf1());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Fighter().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Fighter().getSkillsProf1());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Monk().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Monk().getSkillsProf1());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Paladin().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Paladin().getSkillsProf1());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Ranger().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Ranger().getSkillsProf1());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Rogue().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Rogue().getSkillsProf1());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Sorcerer().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Sorcerer().getSkillsProf1());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Warlock().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Warlock().getSkillsProf1());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Wizard().getSkillsProf2());
+                            observableList = FXCollections.observableList(new Wizard().getSkillsProf1());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -455,64 +412,6 @@ public class CharacterSheet extends Application {
                 grid.add(skill2Box, 2, 9, 2, 1);
             }
         });
-        /*
-        skill3Box = new ComboBox(FXCollections.observableArrayList());
-        clasBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            public void changed(ObservableValue<? extends String> ov,
-                    final String oldvalue, final String newvalue) {
-                ObservableList<String> observableList = FXCollections.observableArrayList("Set Class");
-                try {
-                    switch ((String) clasBox.getValue()) {
-                        case "Barbarian":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Bard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Cleric":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Druid":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Fighter":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Monk":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Paladin":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Ranger":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Rogue":
-                            observableList = FXCollections.observableList(new Rogue().getSkillsProf3());
-                            break;
-                        case "Sorcerer":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Warlock":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                        case "Wizard":
-                            observableList = FXCollections.observableList(new Barbarian().getSkillsProf3());
-                            break;
-                    }
-                } catch (NullPointerException e) {
-                    observableList
-                            = FXCollections.observableArrayList(
-                                    "Set Class"
-                            );
-                }
-                grid.getChildren().remove(skill3Box);
-                skill3Box = new ComboBox(observableList);
-                skill3Box.setPromptText("Skill 3");
-                grid.add(skill3Box, 4, 9, 2, 1);
-            }
-        });
-         */
         spell1Box = new ComboBox(FXCollections.observableArrayList());
         clasBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> ov,
@@ -578,40 +477,40 @@ public class CharacterSheet extends Application {
                 try {
                     switch ((String) clasBox.getValue()) {
                         case "Barbarian":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell2());
+                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Bard().getSpell2());
+                            observableList = FXCollections.observableList(new Bard().getSpell1());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Cleric().getSpell2());
+                            observableList = FXCollections.observableList(new Cleric().getSpell1());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Druid().getSpell2());
+                            observableList = FXCollections.observableList(new Druid().getSpell1());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Fighter().getSpell2());
+                            observableList = FXCollections.observableList(new Fighter().getSpell1());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Monk().getSpell2());
+                            observableList = FXCollections.observableList(new Monk().getSpell1());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Paladin().getSpell2());
+                            observableList = FXCollections.observableList(new Paladin().getSpell1());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Ranger().getSpell2());
+                            observableList = FXCollections.observableList(new Ranger().getSpell1());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Rogue().getSpell2());
+                            observableList = FXCollections.observableList(new Rogue().getSpell1());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Sorcerer().getSpell2());
+                            observableList = FXCollections.observableList(new Sorcerer().getSpell1());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Warlock().getSpell2());
+                            observableList = FXCollections.observableList(new Warlock().getSpell1());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Wizard().getSpell2());
+                            observableList = FXCollections.observableList(new Wizard().getSpell1());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -635,40 +534,40 @@ public class CharacterSheet extends Application {
                 try {
                     switch ((String) clasBox.getValue()) {
                         case "Barbarian":
-                            observableList = FXCollections.observableList(new Barbarian().getSpell3());
+                            observableList = FXCollections.observableList(new Barbarian().getSpell1());
                             break;
                         case "Bard":
-                            observableList = FXCollections.observableList(new Bard().getSpell3());
+                            observableList = FXCollections.observableList(new Bard().getSpell1());
                             break;
                         case "Cleric":
-                            observableList = FXCollections.observableList(new Cleric().getSpell3());
+                            observableList = FXCollections.observableList(new Cleric().getSpell1());
                             break;
                         case "Druid":
-                            observableList = FXCollections.observableList(new Druid().getSpell3());
+                            observableList = FXCollections.observableList(new Druid().getSpell1());
                             break;
                         case "Fighter":
-                            observableList = FXCollections.observableList(new Fighter().getSpell3());
+                            observableList = FXCollections.observableList(new Fighter().getSpell1());
                             break;
                         case "Monk":
-                            observableList = FXCollections.observableList(new Monk().getSpell3());
+                            observableList = FXCollections.observableList(new Monk().getSpell1());
                             break;
                         case "Paladin":
-                            observableList = FXCollections.observableList(new Paladin().getSpell3());
+                            observableList = FXCollections.observableList(new Paladin().getSpell1());
                             break;
                         case "Ranger":
-                            observableList = FXCollections.observableList(new Ranger().getSpell3());
+                            observableList = FXCollections.observableList(new Ranger().getSpell1());
                             break;
                         case "Rogue":
-                            observableList = FXCollections.observableList(new Rogue().getSpell3());
+                            observableList = FXCollections.observableList(new Rogue().getSpell1());
                             break;
                         case "Sorcerer":
-                            observableList = FXCollections.observableList(new Sorcerer().getSpell3());
+                            observableList = FXCollections.observableList(new Sorcerer().getSpell1());
                             break;
                         case "Warlock":
-                            observableList = FXCollections.observableList(new Warlock().getSpell3());
+                            observableList = FXCollections.observableList(new Warlock().getSpell1());
                             break;
                         case "Wizard":
-                            observableList = FXCollections.observableList(new Wizard().getSpell3());
+                            observableList = FXCollections.observableList(new Wizard().getSpell1());
                             break;
                     }
                 } catch (NullPointerException e) {
@@ -796,3 +695,4 @@ public class CharacterSheet extends Application {
         return 1 + new Random().nextInt(6);
     }
 }
+
